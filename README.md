@@ -1,5 +1,7 @@
 # System Threat Forecaster
 
+🛡️ ML-based system threat detection with 5 optimized models achieving 60-63% accuracy through advanced hyperparameter tuning
+
 A machine learning project for predicting system security threats using Windows Defender telemetry data. This project was developed as part of a Kaggle competition.
 
 ### � Technical Achievements
