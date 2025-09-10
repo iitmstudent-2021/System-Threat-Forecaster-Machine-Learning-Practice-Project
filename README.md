@@ -2,7 +2,33 @@
 
 A machine learning project for predicting system security threats using Windows Defender telemetry data. This project was developed as part of a Kaggle competition.
 
-## 📊 Project Overview
+### � Technical Achievements
+
+#### Hyperparameter Tuning Successes
+- **LightGBM**: Optimized with RandomizedSearchCV (100 iterations)
+  - Best parameters: n_estimators=200, learning_rate=0.1, num_leaves=31
+- **XGBoost**: Advanced configuration with early stopping
+  - Optimal parameters: n_estimators=200, learning_rate=0.1, max_depth=6
+- **Random Forest**: Grid search optimization with memory management
+  - Best parameters: n_estimators=200, max_depth=10, min_samples_split=2
+- **SGD Classifier**: Comprehensive hyperparameter exploration
+  - Optimal parameters: alpha=0.01, learning_rate='constant', loss='hinge'
+
+#### Memory Optimization & Data Processing
+- Implemented sparse matrix preprocessing to handle large datasets efficiently
+- Optimized hyperparameter tuning with memory-conscious parameter grids
+- Consistent preprocessing pipeline across all models for fair comparison
+- Error handling and fallback strategies for robust model training
+
+### 🚀 Key Learnings
+
+1. **XGBoost with Advanced Features**: Early stopping and optimal hyperparameters achieved the best performance at 63.1%
+2. **LightGBM Efficiency**: Excellent balance of speed and accuracy, making it highly practical for deployment
+3. **Ensemble Methods**: Random Forest provided robust performance with good interpretability
+4. **Linear Models**: SGD classifier proved surprisingly effective for this dataset type
+5. **Neural Networks**: MLP achieved competitive results, showing the dataset's suitability for deep learning approaches
+
+## 📊 Model Insights
 
 This project implements a machine learning solution to predict potential security threats on computer systems using various system characteristics and configurations. The model analyzes features like antivirus configurations, hardware specifications, OS details, and security settings to classify systems as potentially infected or clean.
 
@@ -15,13 +41,25 @@ Develop a robust classification model that can:
 
 ## 📈 Results
 
-- **Model**: LightGBM Classifier
-- **Validation Accuracy**: 63.0%
+### 🏆 Model Performance Comparison
+
+| Model | Validation Accuracy | Cross-Validation Accuracy | Key Strengths |
+|-------|-------------------|---------------------------|---------------|
+| **XGBoost (Advanced)** | **63.1%** | - | Best overall performance, early stopping |
+| **LightGBM (Tuned)** | **62.9%** | **60.5%** | Fast training, optimal feature handling |
+| **Random Forest (Tuned)** | **60.9%** | **60.5%** | Robust ensemble method |
+| **SGD Classifier (Tuned)** | **60.9%** | **60.7%** | Memory efficient, linear model |
+| **MLP Classifier** | **61.9%** | - | Neural network approach |
+
+### 🎯 Best Model Performance (LightGBM)
+- **Validation Accuracy**: 62.9%
 - **Key Performance Metrics**:
-  - Precision (Not Infected): 63.7%
-  - Precision (Infected): 62.4%
-  - Recall (Not Infected): 58.2%
-  - Recall (Infected): 67.7%
+  - Precision (Not Infected): 63.6%
+  - Precision (Infected): 62.3%
+  - Recall (Not Infected): 58.1%
+  - Recall (Infected): 67.6%
+  - F1-Score (Not Infected): 60.7%
+  - F1-Score (Infected): 64.8%
 
 ## 🔍 Key Features Identified
 
